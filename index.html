@@ -12,6 +12,13 @@
 	</head>
 	<body>
 		
-	<script src="javascripts/jquery-3.1.0.min.js"></script>
+		<div ng-app="shoppingList" ng-controller="myCtrl">
+			<ul>
+				<li ng-repeat="x in products"> {{ x }}</li>
+			</ul>
+		</div>
+		
+		<script src="javascripts/jquery-3.1.0.min.js"></script>
+		<script src="javascripts/script.js"></script>
 	</body>
 </html>
