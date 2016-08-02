@@ -4,18 +4,29 @@
 		<title>Angular Shopping List App</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="style.css"/>
-		<link rel="stylesheet" href="w3-css.css"/>
+		<link rel="stylesheet" href="css/stylesheet.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<script src="javascripts/angular.min.js"></script>
 		<script src="javascripts/angular-animate.js"></script>
 		<script src="javascripts/angular-route.js"></script>
 	</head>
 	<body>
 		
-		<div ng-app="shoppingList" ng-controller="myCtrl">
-			<ul>
-				<li ng-repeat="x in products"> {{ x }}</li>
+		<div ng-app="shoppingList" ng-controller="myCtrl" class="panel-group panel panel-default">
+			<header class="panel-heading">
+				<h3 class="text-center">My Shopping List</h3>
+			</header>
+			<ul class="list-unstyled panel-body">
+				<li ng-repeat="x in products" class="list-group-item">
+					{{ x }}
+					<span ng-click="removeItem($index)" class="pull-right">&times;</span>
+				</li>
 			</ul>
+			<footer class="panel-footer">
+				<input ng-model="addMe" class="form-control" placeholder="Add shopping items here">
+				<button ng-click="addItem()" class="btn btn-success btn-lg pull-right">Add</button>
+				<h3>{{errormessage}}</h3>
+			</footer>
 		</div>
 		
 		<script src="javascripts/jquery-3.1.0.min.js"></script>
