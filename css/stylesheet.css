@@ -1,7 +1,12 @@
 div {
 	max-width: 450px;
-	margin: 0 auto;
+	margin: 50px auto;
 }
 span {
 	cursor: pointer;
+}
+input {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #d3d3d3;
 }
