@@ -1,2 +1,2 @@
 # Shopping-List-App
-This is a shopping-list application using AngularJS
+This is a demo shopping-list application using AngularJS and bootstrap
